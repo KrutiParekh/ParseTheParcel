@@ -1,0 +1,12 @@
+﻿@model ParseTheParcel.Models.Package
+
+<div class="form-group">
+    <div class="labelholder">
+        @Html.LabelFor(model => model.Weight)<span class="text-warning"> (in kg)</span>
+    </div>
+
+    <div class="inputholder">
+        @Html.EditorFor(model => model.Weight)
+    </div>
+</div>
+

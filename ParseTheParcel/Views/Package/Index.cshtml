@@ -11,41 +11,28 @@
 
 
 <h2>Calculate Cost of Delivery</h2>
-
 @using (Ajax.BeginForm("Result", "Package",
                             new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "divCostDetails" }))
 {
     @Html.AntiForgeryToken()
-    <fieldset>
-        <div id="divCostDetails"></div>
 
-        @Html.Partial("_PackageLength")
+    <div id="divCostDetails"></div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Breath)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Breath)
-        </div>
+    <form>
+        
+            @Html.Partial("_PackageLength")
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Height)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Height)
-        </div>
+            @Html.Partial("_PackageBreath")
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Weight)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Weight)
-        </div>
-        <p>
-            <input type="submit" value="Calculate"/>
-        </p>
-    </fieldset>
+            @Html.Partial("_PackageHeight")
 
+            @Html.Partial("_PackageWeight")
+
+            @*<p>
+                <input type="submit" value="Calculate" />
+            </p>*@
+        <button type="submit" class="btn btn-default">Calculate</button>
+    </form>
 }
 
 @section Scripts {

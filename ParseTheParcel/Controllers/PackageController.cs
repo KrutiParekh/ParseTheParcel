@@ -24,11 +24,9 @@ namespace ParseTheParcel.Controllers
                 return View("OverWeightPackage");
             }
 
-            PackageType packageType = PackageSize.GetPackageType(model);
+            model.PackageType = PackageSize.GetPackageType(model);
 
-            model.PackageType = packageType;
-
-            var packageDeliveryCost = _packageCost.GetPackageDeliveryCost(packageType);
+            var packageDeliveryCost = _packageCost.GetPackageDeliveryCost(model.PackageType);
 
             decimal cost = packageDeliveryCost;
 

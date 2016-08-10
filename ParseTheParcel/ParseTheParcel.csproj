@@ -217,6 +217,9 @@
     <Content Include="Views\Package\Result.cshtml" />
     <Content Include="Views\Package\OverWeightPackage.cshtml" />
     <Content Include="Views\Package\_PackageLength.cshtml" />
+    <Content Include="Views\Package\_PackageBreath.cshtml" />
+    <Content Include="Views\Package\_PackageHeight.cshtml" />
+    <Content Include="Views\Package\_PackageWeight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
