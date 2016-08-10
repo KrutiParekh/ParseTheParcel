@@ -1,0 +1,12 @@
+﻿@model ParseTheParcel.Models.Package
+
+<div class="row row-reflex floatedlist">
+    <div class="labelholder">
+        @Html.LabelFor(model => model.Length)<span class="text-warning"> (in mm)</span>
+    </div>
+
+    <div class="inputholder">
+        @Html.EditorFor(model => model.Length)
+    </div>
+</div>
+

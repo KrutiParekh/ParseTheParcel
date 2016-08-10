@@ -1,0 +1,10 @@
+﻿@model ParseTheParcel.Models.Package
+
+@{
+    ViewBag.Title = "Cost";
+}
+
+<hgroup>
+    <h1 class="text-info">Delivery Cost for your @Model.PackageType parcel is</h1>
+    <h2>@Model.Cost.ToString("C")</h2>
+</hgroup>
